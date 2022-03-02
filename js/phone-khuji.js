@@ -74,7 +74,7 @@ const loadPhoneDetails = details => {
     // console.log(details);
     const div = document.createElement('div')
     div.innerHTML = `
-        <div class="bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 mt-14 w-min w-max justify-items-center">
+        <div id="more-info" class="bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 mt-14 w-min w-max justify-items-center">
             <div>
                 <img class="rounded-t-lg ml-8 mt-4" src="${details.image}" alt="" />
                 <div class="p-5">
@@ -84,7 +84,7 @@ const loadPhoneDetails = details => {
                     <p class="mb-3 font-normal text-gray-200 "><span class="font-bold">Memory</span>- ${details.mainFeatures.memory}</p>
                     <p class="mb-3 font-normal text-gray-200 "><span class="font-bold">Sensors</span>- ${details.mainFeatures.sensors}</p>
                 </div>
-                    <button 
+                    <button id="moreinfo"
                         class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 bg-blue-500 ml-4 mb-4">
                         More Details
                     </button>
@@ -94,6 +94,33 @@ const loadPhoneDetails = details => {
     phoneDetailsTable.appendChild(div)
 
 
+    document.getElementById('moreinfo').addEventListener('click', function () {
+        // console.log(details.others.Bluetooth);
+        const div = document.createElement('div')
+        div.innerHTML = `
+            <div  class="p-5">
+                <p class="mb-3 font-normal text-gray-200 "><span class="font-bold">Release Date</span>- ${details.others.releaseDate}</p>
+                <p class="mb-3 font-normal text-gray-200 "><span class="font-bold">Bluetooth</span>- ${details.others.Bluetooth}</p>
+                <p class="mb-3 font-normal text-gray-200 "><span class="font-bold">GPS</span>- ${details.others.GPS}</p>
+                <p class="mb-3 font-normal text-gray-200 "><span class="font-bold">NFC</span>- ${details.others.NFC}</p>
+                <p class="mb-3 font-normal text-gray-200 "><span class="font-bold">Radio</span>- ${details.others.Radio}</p>
+                <p class="mb-3 font-normal text-gray-200 "><span class="font-bold">USB</span>- ${details.others.USB}</p>
+                <p class="mb-3 font-normal text-gray-200 "><span class="font-bold">WLAN</span>- ${details.others.WLAN}</p>
+            </div>
+        `
+        document.getElementById('more-info').appendChild(div)
+    })
+
+
+
 
 }
+
+
+
+
+
+
+
+
 
