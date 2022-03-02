@@ -75,7 +75,7 @@ const loadPhoneDetails = details => {
     // console.log(details);
     const div = document.createElement('div')
     div.innerHTML = `
-        <div id="more-info" class="bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 mt-14 w-min w-max justify-items-center">
+        <div id="more-info" class="bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 mx-auto mt-14 w-min w-max justify-items-center ">
             <div>
                 <img class="rounded-t-lg ml-8 mt-4" src="${details.image}" alt="" />
                 <div class="p-5">
