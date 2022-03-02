@@ -11,6 +11,7 @@ const phoneSearch = () => {
 
     document.getElementById('not-found').textContent = ''
     document.getElementById('search-result').textContent = ''
+    document.getElementById('phone-details-table').textContent = ''
 }
 
 
